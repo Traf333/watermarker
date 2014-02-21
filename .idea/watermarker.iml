@@ -2,7 +2,6 @@
 <module type="RUBY_MODULE" version="4">
   <component name="CompassSettings">
     <option name="compassExecutableFilePath" value="$USER_HOME$/.rbenv/versions/2.1.0/lib/ruby/gems/2.1.0/gems/compass-0.12.2/bin/compass" />
-    <option name="compassSupportEnabled" value="true" />
   </component>
   <component name="FacetManager">
     <facet type="RailsFacetType" name="Ruby on Rails">
@@ -137,6 +136,8 @@
     <orderEntry type="library" scope="PROVIDED" name="atomic (v1.1.14, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="builder (v3.1.4, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="bundler (v1.5.2, rbenv: 2.1.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="climate_control (v0.0.3, rbenv: 2.1.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="cocaine (v0.5.3, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-rails (v4.0.1, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script (v2.2.0, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="coffee-script-source (v1.7.0, rbenv: 2.1.0) [gem]" level="application" />
@@ -149,6 +150,7 @@
     <orderEntry type="library" scope="PROVIDED" name="mail (v2.5.4, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="mime-types (v1.25.1, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="multi_json (v1.8.4, rbenv: 2.1.0) [gem]" level="application" />
+    <orderEntry type="library" scope="PROVIDED" name="paperclip (v4.1.0, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="polyglot (v0.3.4, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack (v1.5.2, rbenv: 2.1.0) [gem]" level="application" />
     <orderEntry type="library" scope="PROVIDED" name="rack-test (v0.6.2, rbenv: 2.1.0) [gem]" level="application" />
