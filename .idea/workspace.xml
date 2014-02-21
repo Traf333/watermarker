@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="586ebdd5-e32c-4b17-bd57-8b90c769dd0b" name="Default" comment="add .paperclip&#10;">
+    <list default="true" id="586ebdd5-e32c-4b17-bd57-8b90c769dd0b" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <list id="2090e059-93dd-4c32-9ae9-b82d3f744eac" name="New changelist" comment="" />
@@ -59,7 +60,16 @@
       <file leaf-file-name="show.html.slim" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/views/images/show.html.slim">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="33" selection-start="52" selection-end="52" vertical-scroll-proportion="0.1" vertical-offset="0" max-vertical-offset="360">
+            <state line="2" column="33" selection-start="52" selection-end="52" vertical-scroll-proportion="0.06382979" vertical-offset="0" max-vertical-offset="564">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="4" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
               <folding />
             </state>
           </provider>
@@ -96,6 +106,7 @@
         <option value="$PROJECT_DIR$/app/views/images/show.html.slim" />
         <option value="$PROJECT_DIR$/app/views/users/_form.html.slim" />
         <option value="$PROJECT_DIR$/app/controllers/users_controller.rb" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -394,15 +405,19 @@
       <created>1392993909765</created>
       <updated>1392993909765</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="add .paperclip&#10;">
+      <created>1392993958956</created>
+      <updated>1392993958956</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="48" y="-4" width="1319" height="773" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Changes" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32850242" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -435,7 +450,8 @@
       <TodoPanelSettings />
     </option>
     <MESSAGE value="add .paperclip" />
-    <option name="LAST_COMMIT_MESSAGE" value="add .paperclip" />
+    <MESSAGE value="add .paperclip&#10;" />
+    <option name="LAST_COMMIT_MESSAGE" value="add .paperclip&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -518,9 +534,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="4" selection-start="465" selection-end="465" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="396">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/views/images/show.html.slim">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="33" selection-start="52" selection-end="52" vertical-scroll-proportion="0.1" vertical-offset="0" max-vertical-offset="360">
+        <state line="2" column="33" selection-start="52" selection-end="52" vertical-scroll-proportion="0.06382979" vertical-offset="0" max-vertical-offset="564">
           <folding />
         </state>
       </provider>

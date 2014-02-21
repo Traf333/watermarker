@@ -1,4 +1,8 @@
 Watermarker::Application.routes.draw do
+  resources :watermarks
+
+  resources :shops
+
   resources :users
 
   root to: 'images#index'

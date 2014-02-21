@@ -1,3 +1,16 @@
+# == Schema Information
+#
+# Table name: images
+#
+#  id                   :integer          not null, primary key
+#  created_at           :datetime
+#  updated_at           :datetime
+#  picture_file_name    :string(255)
+#  picture_content_type :string(255)
+#  picture_file_size    :integer
+#  picture_updated_at   :datetime
+#
+
 class Image < ActiveRecord::Base
 
   has_attached_file :picture, {

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221141009) do
+ActiveRecord::Schema.define(version: 20140221145800) do
 
   create_table "images", force: true do |t|
     t.datetime "created_at"
@@ -22,11 +22,34 @@ ActiveRecord::Schema.define(version: 20140221141009) do
     t.datetime "picture_updated_at"
   end
 
+  create_table "shops", force: true do |t|
+    t.string   "domain"
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "watermark_file_name"
+    t.string   "watermark_content_type"
+    t.integer  "watermark_file_size"
+    t.datetime "watermark_updated_at"
+  end
+
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "watermarks", force: true do |t|
+    t.integer  "shop_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "picture_file_name"
+    t.string   "picture_content_type"
+    t.integer  "picture_file_size"
+    t.datetime "picture_updated_at"
+  end
+
+  add_index "watermarks", ["shop_id"], name: "index_watermarks_on_shop_id"
 
 end
