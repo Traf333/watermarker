@@ -6,6 +6,19 @@ p
 p
   strong Name:
   = @shop.name
+p
+  strong Watermarks:
+  - @shop.watermarks.each do |watermark|
+    p= image_tag watermark.picture.url
+- @shop.images.each do |image|
+  .row
+    .col-md-5
+      .thumbnail
+        = image_tag image.picture(:original)
+    .col-md-5
+      .thumbnail
+        = image_tag image.picture(:medium)
+
 
 = link_to 'Edit', edit_shop_path(@shop)
 '|

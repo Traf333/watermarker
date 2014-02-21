@@ -1,12 +1,16 @@
 Watermarker::Application.routes.draw do
   resources :watermarks
 
-  resources :shops
+  root to: 'shops#index'
+
+
+  resources :shops do
+    resources :watermarks
+    resources :images
+  end
 
   resources :users
 
-  root to: 'images#index'
-  resources :images
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

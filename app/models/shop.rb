@@ -14,4 +14,10 @@
 #
 
 class Shop < ActiveRecord::Base
+
+  has_many :watermarks
+  has_many :images
+
+  accepts_nested_attributes_for :watermarks, allow_destroy: true
+
 end

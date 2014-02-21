@@ -7,7 +7,11 @@ gem 'rails', '4.0.2'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 4.0.0'
+group :assets do
+  gem 'sass-rails', '~> 4.0.0'
+  gem 'bootstrap-sass-rails'
+end
+
 gem 'slim-rails'
 gem 'paperclip'
 # Use Uglifier as compressor for JavaScript assets

@@ -19,6 +19,7 @@ class ShopsController < ApplicationController
 
   # GET /shops/1/edit
   def edit
+    @shop.watermarks.build
   end
 
   # POST /shops
@@ -69,6 +70,6 @@ class ShopsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def shop_params
-      params.require(:shop).permit(:domain, :name)
+      params.require(:shop).permit(:domain, :name, watermarks_attributes: [:picture])
     end
 end

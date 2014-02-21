@@ -12,4 +12,8 @@
   .field
     = f.label :name
     = f.text_field :name
+  .field
+    = f.fields_for :watermarks do |s|
+      = s.file_field :picture
+
   .actions = f.submit 'Save'
