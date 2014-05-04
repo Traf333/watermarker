@@ -1,0 +1,19 @@
+h1 Listing watermarks
+
+table
+  tr
+    th Shop
+    th
+    th
+    th
+
+  - @watermarks.each do |watermark|
+    tr
+      td = watermark.shop
+      td = link_to 'Show', watermark
+      td = link_to 'Edit', edit_watermark_path(watermark)
+      td = link_to 'Destroy', watermark, data: {:confirm => 'Are you sure?'}, :method => :delete
+
+br
+
+= link_to 'New Watermark', new_watermark_path

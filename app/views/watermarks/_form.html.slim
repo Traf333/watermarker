@@ -1,0 +1,12 @@
+= form_for @watermark do |f|
+  - if @watermark.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@watermark.errors.count, "error")} prohibited this watermark from being saved:"
+      ul
+        - @watermark.errors.full_messages.each do |message|
+          li = message
+
+  .field
+    = f.label :shop
+    = f.text_field :shop
+  .actions = f.submit 'Save'

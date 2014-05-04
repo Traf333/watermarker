@@ -1,0 +1,32 @@
+= form_for(@shop, html: {class:"form-horizontal", role: "form"})  do |f|
+  - if @shop.errors.any?
+    #error_explanation
+      h2 = "#{pluralize(@shop.errors.count, "error")} prohibited this shop from being saved:"
+      ul
+        - @shop.errors.full_messages.each do |message|
+          li = message
+
+  .form-group
+    = f.label :domain, 'Домен', class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :domain, class: 'form-control'
+  .form-group
+    = f.label :name, 'Название', class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :name, class: 'form-control'
+  - if @shop.watermarks.present?
+    = image_tag @shop.watermarks.first.picture(:small)
+    - else
+      = f.fields_for :watermarks do |s|
+        .form-group
+          = s.label :picture, 'Водяной знак', class: 'col-sm-2 control-label'
+          = s.file_field :picture, class: 'col-sm-3'
+
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      .actions = f.submit 'Сохранить', class: 'button btn btn-default'
+
+
+
+

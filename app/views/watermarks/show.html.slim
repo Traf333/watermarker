@@ -1,0 +1,9 @@
+p#notice = notice
+
+p
+  strong Shop:
+  = @watermark.shop
+
+= link_to 'Edit', edit_watermark_path(@watermark)
+'|
+= link_to 'Back', watermarks_path

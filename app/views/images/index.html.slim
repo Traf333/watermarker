@@ -1,0 +1,1 @@
+table  tr    th    th    th  - @images.each do |image|    tr      td        = link_to image          = image_tag image.picture(:medium)      td = link_to 'Edit', edit_image_path(image)      td = link_to 'Destroy', image, data: {:confirm => 'Are you sure?'}, :method => :deletebr= link_to 'New Image', new_image_path
