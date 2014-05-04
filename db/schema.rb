@@ -30,10 +30,6 @@ ActiveRecord::Schema.define(version: 20140221160132) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "watermark_file_name"
-    t.string   "watermark_content_type"
-    t.integer  "watermark_file_size"
-    t.datetime "watermark_updated_at"
   end
 
   create_table "users", force: true do |t|
