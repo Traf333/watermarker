@@ -21,5 +21,4 @@ class Watermark < ActiveRecord::Base
                               small:  { geometry: '50x50>'}
                             }
   validates_attachment_content_type :picture, :content_type => ['image/gif', 'image/jpeg', 'image/png', 'image/x-ms-bmp']
-  validates_attachment_presence :picture
 end

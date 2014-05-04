@@ -7,10 +7,9 @@ gem 'rails', '4.0.2'
 gem 'sqlite3'
 
 # Use SCSS for stylesheets
-group :assets do
-  gem 'sass-rails', '~> 4.0.0'
-  gem 'bootstrap-sass-rails'
-end
+gem 'sass-rails', '~> 4.0.0'
+gem 'bootstrap-sass-rails'
+
 
 gem 'slim-rails'
 gem 'paperclip'

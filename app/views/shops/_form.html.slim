@@ -15,5 +15,9 @@
   .field
     = f.fields_for :watermarks do |s|
       = s.file_field :picture
+  .field
+    = f.fields_for :images do |s|
+      = s.hidden_field :watermark, value: @shop.watermark_path
+      = s.file_field :picture
 
   .actions = f.submit 'Save'

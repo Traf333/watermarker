@@ -6,8 +6,8 @@ Watermarker::Application.routes.draw do
 
   resources :shops do
     resources :watermarks
-    resources :images
   end
+  resources :images
 
   resources :users
 

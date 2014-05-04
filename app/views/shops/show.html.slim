@@ -9,7 +9,8 @@ p
 p
   strong Watermarks:
   - @shop.watermarks.each do |watermark|
-    p= image_tag watermark.picture.url
+    p= image_tag watermark.picture(:small), width: 100
+hr
 - @shop.images.each do |image|
   .row
     .col-md-5

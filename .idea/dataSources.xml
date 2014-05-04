@@ -7,6 +7,12 @@
       <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/development.sqlite3</jdbc-url>
       <libraries />
     </data-source>
+    <data-source source="LOCAL" name="Rails watermarker: test" uuid="b38f6f32-2e96-409c-a1d2-7fb8ae0e2c3c">
+      <driver-ref>sqlite.xerial</driver-ref>
+      <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
+      <jdbc-url>jdbc:sqlite:$PROJECT_DIR$/db/test.sqlite3</jdbc-url>
+      <libraries />
+    </data-source>
   </component>
 </project>
 

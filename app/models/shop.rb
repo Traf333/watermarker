@@ -18,6 +18,11 @@ class Shop < ActiveRecord::Base
   has_many :watermarks
   has_many :images
 
-  accepts_nested_attributes_for :watermarks, allow_destroy: true
+  accepts_nested_attributes_for :watermarks, allow_destroy: true, :reject_if => proc { |attrs| attrs['picture'].blank? }
+  accepts_nested_attributes_for :images, allow_destroy: true, :reject_if => proc { |attrs| attrs['picture'].blank? }
+
+  def watermark_path
+    Rails.root.join('public').to_s + watermarks.first.picture(:original).split('?')[0]
+  end
 
 end
