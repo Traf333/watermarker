@@ -18,9 +18,12 @@ class Image < ActiveRecord::Base
 
   require 'paperclip_processors/watermark'
 
+  attr_accessor :watermark
+
   has_attached_file :picture,
                     processors: [:thumbnail, :watermark],
                     styles: {
+                        small: { geometry: '100x100>', watermark_path: Rails.root.join('public/images/watermark.png').to_s },
                         medium: { geometry: '600x600>', watermark_path: Rails.root.join('public/images/watermark.png').to_s}
 
                     }

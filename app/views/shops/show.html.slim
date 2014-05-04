@@ -1,3 +1,7 @@
+coffee:
+  $ ->
+    $('#image_picture').on 'change', ->
+      alert $(this).val()
 p#notice = notice
 
 p
@@ -24,3 +28,11 @@ hr
 = link_to 'Edit', edit_shop_path(@shop)
 '|
 = link_to 'Back', shops_path
+
+hr
+
+= form_for Image.new do |f|
+  = f.file_field :picture
+  = f.text_field :watermark, value: Rails.root.join('public/images/watermark.png').to_s, class: 'form-control'
+  = f.submit 'Сохранить'
+

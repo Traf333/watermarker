@@ -25,4 +25,8 @@ class Shop < ActiveRecord::Base
     Rails.root.join('public').to_s + watermarks.first.picture(:original).split('?')[0]
   end
 
+  def watermark
+    watermarks.first.picture(:small).split('?')[0]
+  end
+
 end
