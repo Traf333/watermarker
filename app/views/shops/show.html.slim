@@ -1,13 +1,13 @@
 p#notice = notice
 
 p
-  strong Domain:
+  strong Домен:
   = @shop.domain
 p
-  strong Name:
+  strong Название:
   = @shop.name
 p
-  strong Watermarks:
+  strong Водяные знаки:
   - @shop.watermarks.each do |watermark|
     p= image_tag watermark.picture(:small), width: 100
 hr
@@ -21,6 +21,6 @@ hr
         = image_tag image.picture(:medium)
 
 
-= link_to 'Edit', edit_shop_path(@shop)
+= link_to 'Редактировать', edit_shop_path(@shop)
 '|
-= link_to 'Back', shops_path
+= link_to 'Назад', shops_path
