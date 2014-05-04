@@ -1,17 +1,17 @@
-coffee:
-  $ ->
-    $('#image_picture').on 'change', ->
-      alert $(this).val()
+/coffee:
+/  $ ->
+/    $('#image_picture').on 'change', ->
+/      alert $(this).val()
 p#notice = notice
 
 p
-  strong Domain:
+  strong Домен:
   = @shop.domain
 p
-  strong Name:
+  strong Название:
   = @shop.name
 p
-  strong Watermarks:
+  strong Водяные знаки:
   - @shop.watermarks.each do |watermark|
     p= image_tag watermark.picture(:small), width: 100
 hr
@@ -25,14 +25,16 @@ hr
         = image_tag image.picture(:medium)
 
 
-= link_to 'Edit', edit_shop_path(@shop)
+= link_to 'Редактировать', edit_shop_path(@shop)
 '|
-= link_to 'Back', shops_path
-
-hr
+= link_to 'Назад', shops_path
+br
+br
 
 = form_for Image.new do |f|
-  = f.file_field :picture
-  = f.text_field :watermark, value: Rails.root.join('public/images/watermark.png').to_s, class: 'form-control'
+  .form-group
+    = f.label :picture, 'Изображение', class: 'col-sm-2 control-label'
+    = f.file_field :picture, class: 'col-sm-3'
+    = text_field_tag :watermark, @shop.watermark_path, class: 'form-control'
   = f.submit 'Сохранить'
 

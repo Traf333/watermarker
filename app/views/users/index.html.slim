@@ -1,8 +1,8 @@
-h1 Listing users
+h1 Список пользователей
 
-table
+table.table.table-striped
   tr
-    th Name
+    th Имя
     th Email
     th
     th
@@ -12,10 +12,10 @@ table
     tr
       td = user.name
       td = user.email
-      td = link_to 'Show', user
-      td = link_to 'Edit', edit_user_path(user)
-      td = link_to 'Destroy', user, data: {:confirm => 'Are you sure?'}, :method => :delete
+      td = link_to 'Просмотр', user
+      td = link_to 'Редактировать', edit_user_path(user)
+      td = link_to 'Удалить', user, data: {:confirm => 'Вы уверены?'}, :method => :delete
 
 br
 
-= link_to 'New User', new_user_path
+= link_to 'Новый пользователь', new_user_path

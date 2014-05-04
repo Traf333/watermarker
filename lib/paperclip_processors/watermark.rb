@@ -1,6 +1,6 @@
 module Paperclip
   class Watermark < Processor
- 
+
     ##
     # A Paperclip::Processor for watermarking images with imagemagick's
     # composite command.
@@ -24,7 +24,7 @@ module Paperclip
     #            user.watermark = Rails.root.join('public/images/rails.png').to_s
     #            user.avatar = File.new('/home/mike/Desktop/photo.jpg')
     #          end
- 
+
     def initialize file, options = {}, attachment = nil
       @file       = file
       @options    = options
@@ -54,7 +54,7 @@ module Paperclip
  
       dst = Tempfile.new([basename, format].compact.join("."))
       dst.binmode
- 
+
       parameters = "-gravity southeast :watermark :source :dest"
       begin
         success = Paperclip.run("composite", parameters,
