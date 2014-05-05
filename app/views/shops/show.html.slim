@@ -5,11 +5,13 @@
 p#notice = notice
 
 p
-  strong Домен:
-  = @shop.domain
-p
   strong Название:
   = @shop.name
+
+p
+  strong Домен:
+  = @shop.domain
+
 p
   strong Водяные знаки:
   - @shop.watermarks.each do |watermark|
@@ -24,17 +26,19 @@ hr
       .thumbnail
         = image_tag image.picture(:medium)
 
-
-= link_to 'Редактировать', edit_shop_path(@shop)
-'|
-= link_to 'Назад', shops_path
-br
-br
-
 = form_for Image.new do |f|
   .form-group
     = f.label :picture, 'Изображение', class: 'col-sm-2 control-label'
     = f.file_field :picture, class: 'col-sm-3'
-    = text_field_tag :watermark, @shop.watermark_path, class: 'form-control'
-  = f.submit 'Сохранить'
+    /= text_field_tag :watermark, @shop.watermark_path, class: 'form-control'
+  = f.submit 'Сохранить', class: 'btn btn-success btn-default'
+br
+br
+= link_to 'Редактировать', edit_shop_path(@shop), class: 'btn btn-warning btn-default'
+'
+= link_to 'Назад', shops_path, class: 'btn btn-primary btn-default'
+
+
+
+
 

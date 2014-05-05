@@ -2,20 +2,19 @@ h1 Список магазинов
 
 table.table.table-striped
   tr
-    th Домен
     th Название
+    th Домен
     th
     th
     th
 
   - @shops.each do |shop|
     tr
+      td = link_to shop.name, shop
       td = shop.domain
-      td = shop.name
-      td = link_to 'Просмотр', shop
-      td = link_to 'Редактировать', edit_shop_path(shop)
-      td = link_to 'Удалить', shop, data: {:confirm => 'Вы уверены?'}, :method => :delete
+      td = link_to 'Редактировать', edit_shop_path(shop), class: 'btn btn-warning btn-default'
+      td = link_to 'Удалить', shop, data: {:confirm => 'Вы уверены?'}, :method => :delete, class: 'btn btn-danger btn-default'
 
 br
 
-= link_to 'Новый магазин', new_shop_path
+= link_to 'Новый магазин', new_shop_path, class: 'btn btn-info btn-default'

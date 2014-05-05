@@ -7,6 +7,5 @@ p
   strong Email:
   = @user.email
 
-= link_to 'Редактировать', edit_user_path(@user)
-'|
-= link_to 'Назад', users_path
+=' link_to 'Редактировать', edit_user_path(@user), class: 'btn btn-warning btn-default'
+= link_to 'Назад', users_path, class: 'btn btn-primary btn-default'
