@@ -30,7 +30,7 @@ hr
   .form-group
     = f.label :picture, 'Изображение', class: 'col-sm-2 control-label'
     = f.file_field :picture, class: 'col-sm-3'
-    /= text_field_tag :watermark, @shop.watermark_path, class: 'form-control'
+    = text_field_tag :watermark, @shop.watermark_path, class: 'form-control'
   = f.submit 'Сохранить', class: 'btn btn-success btn-default'
 br
 br

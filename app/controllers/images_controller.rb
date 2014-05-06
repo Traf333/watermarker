@@ -29,7 +29,7 @@ class ImagesController < ApplicationController
     Image.watermark = params[:watermark]
     # raise Image.watermark.inspect
     # raise Image.watermark.inspect
-    @image = Image.new(image_params)
+    @image = Image.new(image_params )
 
 
     respond_to do |format|
