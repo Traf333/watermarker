@@ -1,4 +1,6 @@
 Watermarker::Application.routes.draw do
+  resources :accounts
+
   resources :watermarks
 
   root to: 'shops#index'
@@ -11,7 +13,16 @@ Watermarker::Application.routes.draw do
 
   resources :users
 
+  resource  :session do
+    collection do
+      get :autologin
+    end
+  end
 
+  get '/install',     to: 'insales_app#install',   as: :install
+  get '/uninstall',   to: 'insales_app#uninstall', as: :uninstall
+  get '/login',       to: 'sessions#create',       as: :login
+  get '/logout',      to: 'sessions#destroy',      as: :logout
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

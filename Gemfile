@@ -11,6 +11,9 @@ gem 'sass-rails', '~> 4.0.0'
 gem 'bootstrap-sass-rails'
 
 
+gem 'insales_api'
+
+
 gem 'slim-rails'
 gem 'paperclip'
 # Use Uglifier as compressor for JavaScript assets

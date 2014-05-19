@@ -1,0 +1,15 @@
+p#notice = notice
+
+p
+  strong Insales subdomain:
+  = @account.insales_subdomain
+p
+  strong Insales:
+  = @account.insales_id
+p
+  strong Password:
+  = @account.password
+
+= link_to 'Edit', edit_account_path(@account)
+'|
+= link_to 'Back', accounts_path
