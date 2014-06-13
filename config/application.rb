@@ -11,6 +11,8 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+ENV.update YAML.load(File.read(File.expand_path('../insales.yml', __FILE__)))
+
 module Watermarker
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
@@ -24,5 +26,6 @@ module Watermarker
     # The default locale is :en and all translations from config/locales/*.rb,yml are auto loaded.
     # config.i18n.load_path += Dir[Rails.root.join('my', 'locales', '*.{rb,yml}').to_s]
     # config.i18n.default_locale = :de
+    config.autoload_paths += %W( #{config.root}/lib )
   end
 end

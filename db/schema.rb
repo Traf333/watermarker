@@ -11,7 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140221160132) do
+ActiveRecord::Schema.define(version: 20140519000619) do
+
+  create_table "accounts", force: true do |t|
+    t.text     "insales_subdomain"
+    t.integer  "insales_id"
+    t.text     "password"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "images", force: true do |t|
     t.datetime "created_at"
@@ -30,6 +38,8 @@ ActiveRecord::Schema.define(version: 20140221160132) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.text     "password"
+    t.integer  "insales_id"
   end
 
   create_table "users", force: true do |t|

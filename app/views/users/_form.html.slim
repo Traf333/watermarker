@@ -1,4 +1,4 @@
-= form_for @user do |f|
+= form_for( @user, html: { class: "form-horizontal", role: "form" } ) do |f|
   - if @user.errors.any?
     #error_explanation
       h2 = "#{pluralize(@user.errors.count, "error")} prohibited this user from being saved:"
@@ -6,10 +6,20 @@
         - @user.errors.full_messages.each do |message|
           li = message
 
-  .field
-    = f.label :Имя
-    = f.text_field :name
-  .field
-    = f.label :email
-    = f.text_field :email
-  .actions = f.submit 'Сохранить'
+  .form-group
+    = f.label :name, 'Имя', class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :name, class: 'form-control'
+  .form-group
+    = f.label :email, 'E-mail', class: 'col-sm-2 control-label'
+    .col-sm-3
+      = f.text_field :email, class: 'form-control'
+
+  .form-group
+    .col-sm-offset-2.col-sm-10
+      .actions = f.submit 'Сохранить', class: 'btn btn-success btn-default'
+
+
+
+
+

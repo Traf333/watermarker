@@ -14,18 +14,19 @@
     = f.label :name, 'Название', class: 'col-sm-2 control-label'
     .col-sm-3
       = f.text_field :name, class: 'form-control'
-  - if @shop.watermarks.present?
-    = image_tag @shop.watermarks.first.picture(:small)
-    - else
-      = f.fields_for :watermarks do |s|
-        .form-group
-          = s.label :picture, 'Водяной знак', class: 'col-sm-2 control-label'
-          = s.file_field :picture, class: 'col-sm-3'
+  /= debug @shop.watermarks
+  /- if @shop.watermarks.present?
+  /  = image_tag @shop.watermarks.first.picture(:small)
+  /- else
+  = f.fields_for :watermarks do |s|
+    .form-group
+      = s.label :picture, 'Водяной знак', class: 'col-sm-2 control-label'
+      = s.file_field :picture, class: 'col-sm-3'
 
 
   .form-group
     .col-sm-offset-2.col-sm-10
-      .actions = f.submit 'Сохранить', class: 'button btn btn-default'
+      .actions = f.submit 'Сохранить', class: 'btn btn-success btn-default'
 
 
 

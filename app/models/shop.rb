@@ -29,4 +29,8 @@ class Shop < ActiveRecord::Base
     watermarks.first.picture(:small).split('?')[0]
   end
 
+  def authorize
+     MyApp.configure_api domain, password
+  end
+
 end
