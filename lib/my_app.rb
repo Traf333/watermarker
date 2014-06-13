@@ -2,7 +2,7 @@ class MyApp < InsalesApi::App
 
   class << self
     def install shop, token, insales_id
-      shop = self.prepare_shop shop
+      shop = self.prepare_domain shop
       account = Account.find_by(insales_subdomain: shop)
       if account.present?
         begin
@@ -17,7 +17,7 @@ class MyApp < InsalesApi::App
     end
 
     def uninstall shop, password
-      account = Account.find_by(insales_subdomain: self.prepare_shop(shop))
+      account = Account.find_by(insales_subdomain: self.prepare_domain(shop))
       return true unless account
       return false if account.password != password
 
