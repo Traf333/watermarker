@@ -1,6 +1,5 @@
 class SessionsController < ApplicationController
   skip_before_filter :authentication, :configure_api, :except => [:destroy]
-  layout 'login'
 
   def show
     render :action => :new
@@ -18,6 +17,7 @@ class SessionsController < ApplicationController
   end
 
   def autologin
+    # raise current_app.inspect
     if current_app and current_app.authorize params[:token]
       redirect_to location || root_path
     else

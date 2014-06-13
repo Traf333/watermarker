@@ -54,9 +54,9 @@ class ApplicationController < ActionController::Base
 
   def account_by_params
     @account ||= if params[:insales_id]
-      Account.find_by_insales_id(params[:insales_id])
+      Account.find_by(insales_id: params[:insales_id])
     else
-      Account.find_by_insales_subdomain(params[:shop])
+      Account.find_by(insales_subdomain: params[:shop])
     end
   end
 

@@ -1,5 +1,5 @@
 class MyApp < InsalesApi::App
-  self.api_key = ENV['API_KEY']
+
   class << self
     def install shop, token, insales_id
       shop = self.prepare_shop shop
@@ -7,7 +7,6 @@ class MyApp < InsalesApi::App
       if account.present?
         begin
           account.authorize
-          InsalesApi::Charge.status
         rescue ActiveResource::UnauthorizedAccess
           account.update_attribute :password, password_by_token(token)
         end

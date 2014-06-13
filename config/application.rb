@@ -11,6 +11,8 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+ENV.update YAML.load(File.read(File.expand_path('../insales.yml', __FILE__)))
+
 module Watermarker
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.
